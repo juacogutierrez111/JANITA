@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">My Application</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="Organizacion">Organización</string>
+    <string name="noEncuentraOrganizacionPregunta">¿No encuentra la organización?</string>
+    <string name="especificaPeriodoMensaje">Indica el período en que estuviste vinculado</string>
+
+</resources>
