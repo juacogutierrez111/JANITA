@@ -1,12 +1,17 @@
 package com.sistemasciudadanos.myapplication;
 
+
+import android.support.v4.app.DialogFragment;
+import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 
 public class RegistrarPeriodoLaboralActivity extends ActionBarActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,4 +41,10 @@ public class RegistrarPeriodoLaboralActivity extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    public void showDatePickerDialog(View v) {
+        DialogFragment newFragment = new DatePickerFragment();
+        newFragment.show(getSupportFragmentManager(), "datePicker");
+    }
+
 }

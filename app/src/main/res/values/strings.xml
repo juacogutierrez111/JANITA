@@ -7,5 +7,7 @@
     <string name="Organizacion">Organización</string>
     <string name="noEncuentraOrganizacionPregunta">¿No encuentra la organización?</string>
     <string name="especificaPeriodoMensaje">Indica el período en que estuviste vinculado</string>
+    <string name="fechaInicioPeriodo">Fecha inicio</string>
+    <string name="fechaFinPeriodoST">Fecha Fin</string>
 
 </resources>

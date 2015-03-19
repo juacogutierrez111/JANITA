@@ -38,7 +38,7 @@
                 android:layout_gravity="center_horizontal" />
 
             <Button
-                style="?android:attr/buttonStyleSmall"
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/noEncuentraOrganizacionPregunta"
@@ -60,8 +60,7 @@
 
             <TableLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/fechasLYT">
+                android:layout_height="wrap_content">
 
                 <TableRow
                     android:layout_width="fill_parent"
@@ -70,33 +69,58 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="New Text"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="@string/fechaInicioPeriodo"
+                        android:id="@+id/fechaInicioPeriodoST" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="@string/fechaFinPeriodoST"
+                        android:id="@+id/fechaFinPeriodoST" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="17/03/2014"
+                        android:id="@+id/fechaInicioBTN"
+                        android:nestedScrollingEnabled="false"
+                        android:onClick="showDatePickerDialog" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="17/03/2015"
+                        android:id="@+id/fechaFinBTN" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Medium Text"
                         android:id="@+id/textView2" />
 
-                    <DatePicker
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/datePicker"
-                        android:spinnersShown="true" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="fill_parent"
-                    android:layout_height="fill_parent">
-
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="New Text"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Medium Text"
                         android:id="@+id/textView3" />
-
-                    <DatePicker
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/datePicker2"
-                        android:spinnersShown="true" />
                 </TableRow>
+
             </TableLayout>
+
 
         </LinearLayout>
 
