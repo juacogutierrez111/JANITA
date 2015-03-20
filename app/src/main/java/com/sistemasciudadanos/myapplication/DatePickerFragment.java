@@ -1,5 +1,6 @@
 package com.sistemasciudadanos.myapplication;
 
+import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.support.v4.app.DialogFragment;
@@ -12,6 +13,8 @@ import java.util.Calendar;
  * Created by Mauricio on 18/03/2015.
  */
 public class DatePickerFragment extends DialogFragment implements DatePickerDialog.OnDateSetListener {
+
+    OnDateSelectedListener onDateSelectedListener;
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
@@ -27,5 +30,28 @@ public class DatePickerFragment extends DialogFragment implements DatePickerDial
 
     public void onDateSet(DatePicker view, int year, int month, int day) {
         // Do something with the date chosen by the user
+        //RegistrarPeriodoLaboralActivity.selectedDate = view;
+        onDateSelectedListener.OnDateSelected(view, year, month, day);
     }
+
+    public void setInterface(OnDateSelectedListener dateSelectedI) {
+        this.onDateSelectedListener = dateSelectedI;
+    }
+
+    @Override
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+        try {
+            onDateSelectedListener = (OnDateSelectedListener) activity;
+        } catch (ClassCastException e) {
+            throw new ClassCastException(activity.toString() + " must implement onDateSelectedListener");
+        }
+    }
+
+
+    public interface OnDateSelectedListener {
+        public void OnDateSelected(DatePicker view, int year, int month, int day);
+    }
+
+
 }

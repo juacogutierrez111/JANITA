@@ -8,10 +8,11 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
+import android.widget.DatePicker;
 
 
-public class RegistrarPeriodoLaboralActivity extends ActionBarActivity {
-
+public class RegistrarPeriodoLaboralActivity extends ActionBarActivity implements DatePickerFragment.OnDateSelectedListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,9 +43,23 @@ public class RegistrarPeriodoLaboralActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
+
+
     public void showDatePickerDialog(View v) {
         DialogFragment newFragment = new DatePickerFragment();
+        //((DatePickerFragment)newFragment).setInterface((DatePickerFragment.OnDateSelectedListener)RegistrarPeriodoLaboralActivity.this);
         newFragment.show(getSupportFragmentManager(), "datePicker");
-    }
 
+        //final Button fecha = (Button) v;
+        //fecha.setText(selectedDate.getYear());
+        //final Button fecha = (Button) findViewById(R.id.fechaInicioBTN);
+   }
+
+
+    @Override
+    public void OnDateSelected(DatePicker view, int year, int month, int day) {
+        final Button fecha = (Button) findViewById(R.id.fechaInicioBTN);
+        fecha.setText(Integer.toString(year));
+    }
 }
+
