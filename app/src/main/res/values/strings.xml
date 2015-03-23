@@ -13,5 +13,6 @@
     <string name="ingresarBTN">Ingresar</string>
     <string name="registrarseBTN">Registrarse</string>
     <string name="eslogan">JANITA. Registra y valida tu vida profesional.</string>
+    <string name="title_activity_administrar_periodos">AdministrarPeriodosActivity</string>
 
 </resources>

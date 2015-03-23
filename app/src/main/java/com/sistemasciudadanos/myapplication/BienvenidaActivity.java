@@ -4,14 +4,20 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.view.View.OnClickListener;
+import android.content.Intent;
 
-
-public class BienvenidaActivity extends ActionBarActivity {
+public class BienvenidaActivity extends ActionBarActivity implements OnClickListener  {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bienvenida);
+
+        Button button = (Button)findViewById(R.id.ingresarBTN);
+        button.setOnClickListener(this);
     }
 
 
@@ -36,4 +42,13 @@ public class BienvenidaActivity extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    public void onClick(View v) {
+        if (((Button) v).getId() == R.id.ingresarBTN)
+        {
+            startActivity(new Intent("com.sistemasciudadanos.myapplication.ADMINISTRARPERIODOSACTIVITY"));
+        }
+    }
+
+
 }
