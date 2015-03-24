@@ -1,10 +1,15 @@
 package com.sistemasciudadanos.myapplication;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.internal.widget.AdapterViewCompat;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -16,14 +21,13 @@ public class AdministrarPeriodosActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_administrar_periodos);
 
-
         //EJEMPLO DE LISTVIEW
         final ListView listview = (ListView) findViewById(R.id.periodosLaboralesLV);
-        String[] values = new String[] { "Android", "iPhone", "WindowsMobile",
-                "Blackberry", "WebOS", "Ubuntu", "Windows7", "Max OS X",
-                "Linux", "OS/2", "Ubuntu", "Windows7", "Max OS X", "Linux",
+        String[] values = new String[] { "Carvajal S.A.", "Gato Malo Ltda", "LG LTDA",
+                "Microsoft", "Postobon", "SODIMAC Colombia", "BigMarket Ltda", "Bavaria",
+                "Henkel", "Banco de Bogotá", "Bayer", "Sistemas Ciudadanos Unipersonal", "BigMarket Ltda", "Alpina S.A.",
                 "OS/2", "Ubuntu", "Windows7", "Max OS X", "Linux", "OS/2",
-                "Android", "iPhone", "WindowsMobile" };
+                "Sony Pictures", "Pixar", "Alcadía de Bogotá" };
 
         final ArrayList<String> list = new ArrayList<String>();
         for (int i = 0; i < values.length; ++i) {
@@ -32,6 +36,21 @@ public class AdministrarPeriodosActivity extends ActionBarActivity {
 
         final RegistrosLaboralesArrayAdapter adapter = new RegistrosLaboralesArrayAdapter(this.getApplicationContext(), values);
         listview.setAdapter(adapter);
+
+        AdapterView.OnItemClickListener listener = new AdapterView.OnItemClickListener() {
+            public void onItemClick(AdapterView<?> parent, View view, int position,
+                                    long id) {
+
+                Intent detallePLIntent = new Intent("com.sistemasciudadanos.myapplication.ADMINISTRARPERIODOSACTIVITY");
+                //detallePLIntent.putExtra("id", parent.getItemAtPosition(position).toString());
+                startActivity(detallePLIntent);
+
+                setTitle(parent.getItemAtPosition(position).toString());
+            }
+
+        };
+
+        listview.setOnItemClickListener(listener);
     }
 
     @Override

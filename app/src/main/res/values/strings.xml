@@ -14,5 +14,9 @@
     <string name="registrarseBTN">Registrarse</string>
     <string name="eslogan">JANITA. Registra y valida tu vida profesional.</string>
     <string name="title_activity_administrar_periodos">AdministrarPeriodosActivity</string>
+    <string name="title_activity_detalle_registro_laboral">DetalleRegistroLaboralActivity</string>
+    <string name="fechaCracion">Fecha de creación</string>
+    <string name="estado">Estado</string>
+    <string name="numeroPeriodosLaboralesLBL">Número periódos laborales</string>
 
 </resources>

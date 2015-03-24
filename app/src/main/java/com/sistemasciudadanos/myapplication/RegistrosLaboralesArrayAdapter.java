@@ -10,6 +10,7 @@ import android.widget.TextView;
 public class RegistrosLaboralesArrayAdapter extends ArrayAdapter<String> {
     private final Context context;
     private final String[] values;
+    private final String registrosLaboralesJSON;
 
     public RegistrosLaboralesArrayAdapter(Context context, String[] values) {
         super(context, R.layout.registrolaboral, values);
@@ -24,7 +25,13 @@ public class RegistrosLaboralesArrayAdapter extends ArrayAdapter<String> {
         View rowView = inflater.inflate(R.layout.registrolaboral, parent, false);
         TextView nombreRegistroLaboralTV = (TextView) rowView.findViewById(R.id.nombreRegistroLaboralTV);
         TextView detallesRegistroLaboralTV = (TextView) rowView.findViewById(R.id.detallesRegistroLaboralTV);
+        TextView idRegistroLaboralTV = (TextView) rowView.findViewById(R.id.idRegistroLaboralTV);
         //ImageView imageView = (ImageView) rowView.findViewById(R.id.icon);
+
+        //Aquí obtiene el objeto JSON
+
+
+
         nombreRegistroLaboralTV.setText(values[position]);
 
 

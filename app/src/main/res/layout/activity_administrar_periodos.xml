@@ -7,10 +7,52 @@
     tools:context="com.sistemasciudadanos.myapplication.AdministrarPeriodosActivity"
     android:id="@+id/periodosLaboralesRL">
 
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/consolidadoPeriodos">
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/numeroPeriodosLaboralesLBL"
+                android:id="@+id/numeroPeriodosLaboralesTV" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5"
+                android:id="@+id/textView9" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Text"
+                android:id="@+id/textView10" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Text"
+                android:id="@+id/textView11" />
+        </TableRow>
+    </TableLayout>
+
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
+        android:layout_height="fill_parent"
+        android:id="@+id/periodosLaboralesLL"
+        android:layout_below="@+id/consolidadoPeriodos">
 
         <ListView
             android:layout_width="wrap_content"
