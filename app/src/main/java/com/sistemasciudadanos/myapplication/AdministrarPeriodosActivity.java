@@ -21,6 +21,15 @@ public class AdministrarPeriodosActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_administrar_periodos);
 
+        //Enable taps on the home logo
+        //getActionBar().setHomeButtonEnabled(true);
+        //Display home with the "up" arrow indicator
+        //getActionBar().setDisplayHomeAsUpEnabled(true);
+
+
+
+
+
         //EJEMPLO DE LISTVIEW
         final ListView listview = (ListView) findViewById(R.id.periodosLaboralesLV);
         String[] values = new String[] { "Carvajal S.A.", "Gato Malo Ltda", "LG LTDA",
@@ -28,6 +37,9 @@ public class AdministrarPeriodosActivity extends ActionBarActivity {
                 "Henkel", "Banco de Bogotá", "Bayer", "Sistemas Ciudadanos Unipersonal", "BigMarket Ltda", "Alpina S.A.",
                 "OS/2", "Ubuntu", "Windows7", "Max OS X", "Linux", "OS/2",
                 "Sony Pictures", "Pixar", "Alcadía de Bogotá" };
+
+
+
 
         final ArrayList<String> list = new ArrayList<String>();
         for (int i = 0; i < values.length; ++i) {
@@ -41,11 +53,12 @@ public class AdministrarPeriodosActivity extends ActionBarActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position,
                                     long id) {
 
-                Intent detallePLIntent = new Intent("com.sistemasciudadanos.myapplication.ADMINISTRARPERIODOSACTIVITY");
+                Intent detallePLIntent = new Intent("com.sistemasciudadanos.myapplication.DETALLEREGISTROLABORAL");
                 //detallePLIntent.putExtra("id", parent.getItemAtPosition(position).toString());
                 startActivity(detallePLIntent);
-
                 setTitle(parent.getItemAtPosition(position).toString());
+                //Llama la actividad de detalle y le pasa el objeto período....
+
             }
 
         };

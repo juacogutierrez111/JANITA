@@ -30,13 +30,20 @@
             android:label="@string/title_activity_administrar_periodos" >
             <intent-filter>
                 <action android:name="com.sistemasciudadanos.myapplication.ADMINISTRARPERIODOSACTIVITY" />
-
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
             android:name=".DetalleRegistroLaboralActivity"
             android:label="@string/title_activity_detalle_registro_laboral" >
+            <intent-filter>
+                <action android:name="com.sistemasciudadanos.myapplication.DETALLEREGISTROLABORAL" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".DetalleValidacionActivity"
+            android:label="@string/title_activity_detalle_validacion" >
         </activity>
     </application>
 

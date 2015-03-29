@@ -10,7 +10,6 @@ import android.widget.TextView;
 public class RegistrosLaboralesArrayAdapter extends ArrayAdapter<String> {
     private final Context context;
     private final String[] values;
-    private final String registrosLaboralesJSON;
 
     public RegistrosLaboralesArrayAdapter(Context context, String[] values) {
         super(context, R.layout.registrolaboral, values);

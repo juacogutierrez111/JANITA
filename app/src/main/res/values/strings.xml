@@ -13,10 +13,14 @@
     <string name="ingresarBTN">Ingresar</string>
     <string name="registrarseBTN">Registrarse</string>
     <string name="eslogan">JANITA. Registra y valida tu vida profesional.</string>
-    <string name="title_activity_administrar_periodos">AdministrarPeriodosActivity</string>
-    <string name="title_activity_detalle_registro_laboral">DetalleRegistroLaboralActivity</string>
+    <string name="title_activity_administrar_periodos">Períodos</string>
+    <string name="title_activity_detalle_registro_laboral"></string>
     <string name="fechaCracion">Fecha de creación</string>
     <string name="estado">Estado</string>
     <string name="numeroPeriodosLaboralesLBL">Número periódos laborales</string>
+    <string name="title_activity_detalle_validacion">DetalleValidacionActivity</string>
+    <string name="TipoLBLTV">Tipo</string>
+    <string name="fechaValidacionLBLTV">Fecha de validación</string>
+    <string name="numeroPeriodosValidadosLBLTXT">Número periódos validados</string>
 
 </resources>

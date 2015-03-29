@@ -42,7 +42,7 @@ public class DatePickerFragment extends DialogFragment implements DatePickerDial
     public void onAttach(Activity activity) {
         super.onAttach(activity);
         try {
-            onDateSelectedListener = (OnDateSelectedListener) activity;
+            onDateSelectedListener = (OnDateSelectedListener) activity; //con esto ya no es necesario el setInterface.
         } catch (ClassCastException e) {
             throw new ClassCastException(activity.toString() + " must implement onDateSelectedListener");
         }
