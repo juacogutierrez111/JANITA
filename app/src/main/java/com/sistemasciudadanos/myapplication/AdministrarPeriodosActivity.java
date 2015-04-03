@@ -11,6 +11,10 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.sistemasciudadanos.janita.cad.CADLocal;
+import com.sistemasciudadanos.janita.comun.HistorialLaboral;
+
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 
 
@@ -25,28 +29,34 @@ public class AdministrarPeriodosActivity extends ActionBarActivity {
         //getActionBar().setHomeButtonEnabled(true);
         //Display home with the "up" arrow indicator
         //getActionBar().setDisplayHomeAsUpEnabled(true);
+        //Obtiene el Historial Laboral.
 
+        HistorialLaboral historialLaboral = null;
 
-
-
+        try {
+             historialLaboral = CADLocal.getInstance().obtenerHistorialLaboral(this.getApplicationContext());
+        }
+        catch (FileNotFoundException e){
+            e.printStackTrace();
+        }
 
         //EJEMPLO DE LISTVIEW
         final ListView listview = (ListView) findViewById(R.id.periodosLaboralesLV);
+
         String[] values = new String[] { "Carvajal S.A.", "Gato Malo Ltda", "LG LTDA",
                 "Microsoft", "Postobon", "SODIMAC Colombia", "BigMarket Ltda", "Bavaria",
                 "Henkel", "Banco de Bogotá", "Bayer", "Sistemas Ciudadanos Unipersonal", "BigMarket Ltda", "Alpina S.A.",
                 "OS/2", "Ubuntu", "Windows7", "Max OS X", "Linux", "OS/2",
                 "Sony Pictures", "Pixar", "Alcadía de Bogotá" };
 
-
-
-
+/*
         final ArrayList<String> list = new ArrayList<String>();
         for (int i = 0; i < values.length; ++i) {
             list.add(values[i]);
         }
+*/
 
-        final RegistrosLaboralesArrayAdapter adapter = new RegistrosLaboralesArrayAdapter(this.getApplicationContext(), values);
+        final RegistrosLaboralesArrayAdapter adapter = new RegistrosLaboralesArrayAdapter(this.getApplicationContext(), historialLaboral.getRegistrosLaborales());
         listview.setAdapter(adapter);
 
         AdapterView.OnItemClickListener listener = new AdapterView.OnItemClickListener() {
@@ -58,9 +68,7 @@ public class AdministrarPeriodosActivity extends ActionBarActivity {
                 startActivity(detallePLIntent);
                 setTitle(parent.getItemAtPosition(position).toString());
                 //Llama la actividad de detalle y le pasa el objeto período....
-
             }
-
         };
 
         listview.setOnItemClickListener(listener);

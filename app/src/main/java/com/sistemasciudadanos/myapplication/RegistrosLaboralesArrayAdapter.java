@@ -7,15 +7,20 @@ import android.widget.ArrayAdapter;
 //import android.widget.ImageView;
 import android.widget.TextView;
 
-public class RegistrosLaboralesArrayAdapter extends ArrayAdapter<String> {
-    private final Context context;
-    private final String[] values;
+import com.sistemasciudadanos.janita.comun.RegistroLaboral;
 
-    public RegistrosLaboralesArrayAdapter(Context context, String[] values) {
+import java.util.List;
+
+public class RegistrosLaboralesArrayAdapter extends ArrayAdapter<RegistroLaboral> {
+    private final Context context;
+    private final RegistroLaboral[] values;
+
+    public RegistrosLaboralesArrayAdapter(Context context, RegistroLaboral[] values) {
         super(context, R.layout.registrolaboral, values);
         this.context = context;
         this.values = values;
     }
+
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
@@ -26,13 +31,9 @@ public class RegistrosLaboralesArrayAdapter extends ArrayAdapter<String> {
         TextView detallesRegistroLaboralTV = (TextView) rowView.findViewById(R.id.detallesRegistroLaboralTV);
         TextView idRegistroLaboralTV = (TextView) rowView.findViewById(R.id.idRegistroLaboralTV);
         //ImageView imageView = (ImageView) rowView.findViewById(R.id.icon);
+        //Aquí obtiene el objeto JSON.
 
-        //Aquí obtiene el objeto JSON
-
-
-
-        nombreRegistroLaboralTV.setText(values[position]);
-
+        nombreRegistroLaboralTV.setText(values[position].getNombreOrganizacion());
 
         /*
         // change the icon for Windows and iPhone

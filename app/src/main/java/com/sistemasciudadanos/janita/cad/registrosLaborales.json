@@ -1,6 +1,0 @@
-{"registrosLaborales":[
-    {"nombreOrganizacion":"Coltejer", "fechaCreacion":"Doe", "fechaInicio":"18/02/2015", fechaFin":"18/04/2015", "duracionDias":60, "duracionMeses":3, "estado":"VALIDADO"},
-    {"nombreOrganizacion":"Bancolombia", "fechaCreacion":"Doe", "fechaInicio":"18/02/2015", fechaFin":"18/04/2015", "duracionDias":60, "duracionMeses":3, "estado":"PENDIENTE"},
-    {"nombreOrganizacion":"Bavaria", "fechaCreacion":"Doe", "fechaInicio":"18/02/2015", fechaFin":"18/04/2015", "duracionDias":60, "duracionMeses":3, "estado":"PENDIENTE"},
-]
-}

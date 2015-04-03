@@ -1,0 +1,13 @@
+{
+"usuario":"juanmauricio",
+"nombres":"Juan Mauricio",
+"apellidos":"López Gutiérrez"
+"tipo_doc_id":"CEDULA",
+"numero_doc_id":79783193,
+"id_unico":"11111111111111",
+"registrosLaborales":[
+    {"id_registro_laboral":"123123123","nombreOrganizacion":"Coltejer", "fechaCreacion":"Doe", "fechaInicio":"18/02/2015", fechaFin":"18/04/2015", "duracionDias":60, "duracionMeses":3, "estado":"VALIDADO"},
+    {"id_registro_laboral":"345324535","nombreOrganizacion":"Bancolombia", "fechaCreacion":"Doe", "fechaInicio":"18/02/2015", fechaFin":"18/04/2015", "duracionDias":60, "duracionMeses":3, "estado":"PENDIENTE"},
+    {"id_registro_laboral":"76535434s","nombreOrganizacion":"Bavaria", "fechaCreacion":"Doe", "fechaInicio":"18/02/2015", fechaFin":"18/04/2015", "duracionDias":60, "duracionMeses":3, "estado":"PENDIENTE"},
+]
+}

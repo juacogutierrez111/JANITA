@@ -5,6 +5,7 @@ import java.util.Date;
  * Created by Mauricio on 29/03/2015.
  */
 public class RegistroLaboral {
+    private String id_registro_laboral;
     private String nombreOrganizacion;
     private Date fechaCreacion;
     private Date fechaInicio;
@@ -12,6 +13,14 @@ public class RegistroLaboral {
     private Integer duracionDias;
     private Integer duracionMeses;
     private String estado;
+
+    public String getId_registro_laboral() {
+        return id_registro_laboral;
+    }
+
+    public void setId_registro_laboral(String id_registro_laboral) {
+        this.id_registro_laboral = id_registro_laboral;
+    }
 
     public String getNombreOrganizacion() {
         return nombreOrganizacion;
@@ -41,4 +50,3 @@ public class RegistroLaboral {
         return estado;
     }
 }
-
