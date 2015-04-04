@@ -1,6 +1,5 @@
 package com.sistemasciudadanos.janita.comun;
 import java.util.Date;
-
 /**
  * Created by Mauricio on 29/03/2015.
  */
@@ -12,7 +11,11 @@ public class RegistroLaboral {
     private Date fechaFin;
     private Integer duracionDias;
     private Integer duracionMeses;
+    private String duracion;
     private String estado;
+    private String estadoValidacionEmpleador;
+    private String estadoValidacionSegSocial;
+    private String estadoValidacionReferencia;
 
     public String getId_registro_laboral() {
         return id_registro_laboral;
@@ -22,7 +25,7 @@ public class RegistroLaboral {
         this.id_registro_laboral = id_registro_laboral;
     }
 
-    public String getNombreOrganizacion() {
+    public    String getNombreOrganizacion() {
         return nombreOrganizacion;
     }
 
@@ -46,7 +49,39 @@ public class RegistroLaboral {
         return duracionMeses;
     }
 
+    public String getDuracion() {
+        return duracion;
+    }
+
+    public void setDuracion(String duracion) {
+        this.duracion = duracion;
+    }
+
     public String getEstado() {
         return estado;
+    }
+
+    public void setEstadoValidacionEmpleador(String estadoValidacionEmpleador) {
+        this.estadoValidacionEmpleador = estadoValidacionEmpleador;
+    }
+
+    public String getEstadoValidacionEmpleador() {
+        return estadoValidacionEmpleador;
+    }
+
+    public void setEstadoValidacionReferencia(String estadoValidacionReferencia) {
+        this.estadoValidacionReferencia = estadoValidacionReferencia;
+    }
+
+    public String getEstadoValidacionReferencia() {
+        return estadoValidacionReferencia;
+    }
+
+    public void setEstadoValidacionSegSocial(String estadoValidacionSegSocial) {
+        this.estadoValidacionSegSocial = estadoValidacionSegSocial;
+    }
+
+    public String getEstadoValidacionSegSocial() {
+        return estadoValidacionSegSocial;
     }
 }

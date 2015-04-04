@@ -15,18 +15,20 @@
 
     <TextView
         android:layout_width="fill_parent"
-        android:layout_height="26dip"
+        android:layout_height="wrap_content"
         android:text="Carvajal S.A. :: 90022778-5"
         android:id="@+id/nombreRegistroLaboralTV"
         android:layout_alignParentTop="true"
         android:layout_alignParentBottom="false"
-        android:layout_toRightOf="@+id/registroIV" />
+        android:layout_toRightOf="@+id/registroIV"
+        android:layout_toLeftOf="@+id/validacionEmpleadorTV"
+        android:layout_toStartOf="@+id/validacionEmpleadorTV" />
 
     <TextView
-        android:layout_width="fill_parent"
+        android:layout_width="wrap_content"
         android:layout_height="20dip"
-        android:text="12/02/2112 - 12/02/2014 (12 meses)"
-        android:id="@+id/detallesRegistroLaboralTV"
+        android:text="12/02/2112"
+        android:id="@+id/fechaInicioRLTV"
         android:layout_below="@+id/nombreRegistroLaboralTV"
         android:layout_toRightOf="@+id/registroIV"
         android:layout_alignParentBottom="false"
@@ -34,4 +36,88 @@
         android:layout_alignParentLeft="false"
         android:layout_alignParentRight="false"
         android:gravity="right" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="01/01/2014"
+        android:id="@+id/fechaFinRLTV"
+        android:layout_below="@+id/nombreRegistroLaboralTV"
+        android:layout_toRightOf="@+id/separadorFechas"
+        android:layout_toEndOf="@+id/separadorFechas" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/separadorFechas"
+        android:id="@+id/separadorFechas"
+        android:paddingLeft="5dip"
+        android:paddingRight="5dip"
+        android:layout_below="@+id/nombreRegistroLaboralTV"
+        android:layout_toRightOf="@+id/fechaInicioRLTV"
+        android:layout_toEndOf="@+id/fechaInicioRLTV" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/duracionLBL"
+        android:id="@+id/duracionTVLBL"
+        android:layout_below="@+id/fechaInicioRLTV"
+        android:layout_alignLeft="@+id/fechaInicioRLTV"
+        android:layout_alignStart="@+id/fechaInicioRLTV" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="6 mese 25 días"
+        android:id="@+id/duracionTV"
+        android:layout_below="@+id/fechaInicioRLTV"
+        android:layout_toRightOf="@+id/duracionTVLBL"
+        android:layout_toEndOf="@+id/duracionTVLBL"
+        android:paddingLeft="5dip" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/duracionTVLBL"
+        android:layout_alignLeft="@+id/duracionTVLBL"
+        android:layout_alignStart="@+id/duracionTVLBL">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Empleador"
+            android:id="@+id/validacionEmpleadorTV"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_weight="33"
+            android:textAlignment="center"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Seg Social"
+            android:id="@+id/validacionSeguridadSocialTV"
+            android:layout_below="@+id/validacionEmpleadorTV"
+            android:layout_toRightOf="@+id/nombreRegistroLaboralTV"
+            android:layout_toEndOf="@+id/nombreRegistroLaboralTV"
+            android:layout_weight="33"
+            android:textAlignment="center"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Referencia"
+            android:id="@+id/validacionReferenciaTV"
+            android:layout_below="@+id/validacionSeguridadSocialTV"
+            android:layout_alignLeft="@+id/validacionSeguridadSocialTV"
+            android:layout_alignStart="@+id/validacionSeguridadSocialTV"
+            android:layout_weight="33"
+            android:textAlignment="center"
+            android:gravity="center" />
+    </LinearLayout>
 </RelativeLayout>

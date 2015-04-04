@@ -22,5 +22,7 @@
     <string name="TipoLBLTV">Tipo</string>
     <string name="fechaValidacionLBLTV">Fecha de validación</string>
     <string name="numeroPeriodosValidadosLBLTXT">Número periódos validados</string>
+    <string name="separadorFechas">hasta</string>
+    <string name="duracionLBL">Duración</string>
 
 </resources>
