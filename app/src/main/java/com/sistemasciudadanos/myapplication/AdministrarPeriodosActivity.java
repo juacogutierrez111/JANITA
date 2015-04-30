@@ -88,6 +88,11 @@ public class AdministrarPeriodosActivity extends ActionBarActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
+        if (id == R.id.crearPeriodoLaboral) {
+            DesplegarCrearRegistroLaboral();
+            return true;
+        }
+
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
@@ -95,6 +100,11 @@ public class AdministrarPeriodosActivity extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    private void DesplegarCrearRegistroLaboral(){
+        startActivity(new Intent("com.sistemasciudadanos.myapplication.REGISTRARPERIODOLABORALACTIVITY"));
+    }
+
 
 
 }

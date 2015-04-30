@@ -14,6 +14,8 @@ import android.widget.DatePicker;
 
 public class RegistrarPeriodoLaboralActivity extends ActionBarActivity implements DatePickerFragment.OnDateSelectedListener {
 
+    View vistaFecha;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,9 +45,8 @@ public class RegistrarPeriodoLaboralActivity extends ActionBarActivity implement
         return super.onOptionsItemSelected(item);
     }
 
-
-
     public void showDatePickerDialog(View v) {
+        vistaFecha = v;
         DialogFragment newFragment = new DatePickerFragment();
         //((DatePickerFragment)newFragment).setInterface((DatePickerFragment.OnDateSelectedListener)RegistrarPeriodoLaboralActivity.this);
         newFragment.show(getSupportFragmentManager(), "datePicker");
@@ -55,11 +56,11 @@ public class RegistrarPeriodoLaboralActivity extends ActionBarActivity implement
         //final Button fecha = (Button) findViewById(R.id.fechaInicioBTN);
    }
 
-
     @Override
     public void OnDateSelected(DatePicker view, int year, int month, int day) {
-        final Button fecha = (Button) findViewById(R.id.fechaInicioBTN);
-        fecha.setText(Integer.toString(year));
+        //final Button fecha = (Button) findViewById(R.id.fechaInicioBTN);
+        final Button fecha = (Button)vistaFecha;
+        fecha.setText(new StringBuilder().append(Integer.toString(year)).append("-").append(Integer.toString(month + 1)).append("-").append(Integer.toString(day)));
     }
 }
 
