@@ -28,4 +28,8 @@
     <string name="cargoLBL">Indica el cargo o actividad desempeñada.</string>
     <string name="noEncuentraCargo">No encuntro el cargo!</string>
     <string name="registrarPeriodoBTN">Registrar período!</string>
+    <string name="nombreOrganizacion">Nombre de la organización</string>
+    <string name="nitOrganizacion">NIT</string>
+    <string name="title_activity_buscar_empresa_inexistente">BuscarEmpresaInexistenteActivity
+    </string>
 </resources>

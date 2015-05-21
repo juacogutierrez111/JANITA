@@ -1,6 +1,7 @@
 package com.sistemasciudadanos.myapplication;
 
 
+import android.content.Intent;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.ActionBarActivity;
@@ -62,5 +63,12 @@ public class RegistrarPeriodoLaboralActivity extends ActionBarActivity implement
         final Button fecha = (Button)vistaFecha;
         fecha.setText(new StringBuilder().append(Integer.toString(year)).append("-").append(Integer.toString(month + 1)).append("-").append(Integer.toString(day)));
     }
+
+    public void RegistrarEmpresaNoExistente(View v)
+    {
+        startActivity(new Intent("com.sistemasciudadanos.myapplication.BuscarEmpresaInexistenteActivity"));
+    }
+
+
 }
 

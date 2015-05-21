@@ -1,11 +1,11 @@
 {"usuario":"juanmauricio",
-"nombres":"Juan Mauricio",
-"apellidos":"López Gutiérrez",
-"tipo_doc_id":"CEDULA",
-"numero_doc":79783193,
-"id_unico":"11111111111111",
-"registrosLaborales":[
-    {"id_registro_laboral":"123123123","nombreOrganizacion":"Coltejer", "fechaCreacion":"2015-02-18", "fechaInicio":"2015-02-18", "fechaFin":"2015-02-18", "duracionDias":15, "duracionMeses":3, "duracion":"3 meses 15 días", "estado":"VERDE", "estadoValidacionEmpleador":"VERDE", "estadoValidacionSegSocial":"NARANJA","estadoValidacionReferencia":"ROJO"},
-    {"id_registro_laboral":"345324535","nombreOrganizacion":"Bancolombia", "fechaCreacion":"2015-02-18", "fechaInicio":"2015-02-18", "fechaFin":"2015-02-18", "duracionDias":15, "duracionMeses":3, "duracion":"2 meses 15 días","estado":"NARANJA", "estadoValidacionEmpleador":"ROJO", "estadoValidacionSegSocial":"NARANJA","estadoValidacionReferencia":"ROJO"},
-    {"id_registro_laboral":"76535434s","nombreOrganizacion":"Bavaria", "fechaCreacion":"2015-02-18", "fechaInicio":"2015-02-18", "fechaFin":"2015-02-18", "duracionDias":15, "duracionMeses":3, "duracion":"7 meses 15 días", "estado":"ROJO", "estadoValidacionEmpleador":"ROJO", "estadoValidacionSegSocial":"VERDE","estadoValidacionReferencia":"NARANJA"}
-]}
+      "nombres":"Juan Mauricio",
+      "apellidos":"López Gutiérrez",
+      "tipo_doc_id":"CEDULA",
+      "numero_doc":79783193,
+      "id_unico":"11111111111111",
+      "registrosLaborales":[
+          {"id_registro_laboral":"123123123","nombreOrganizacion":"Coltejer", "fechaCreacion":"2015-02-18", "fechaInicio":"2015-02-18", "fechaFin":"2015-02-18", "duracionDias":15, "duracionMeses":3, "duracion":"3 meses 15 días", "estado":"VERDE", "estadoValidacionEmpleador":"VERDE", "estadoValidacionSegSocial":"NARANJA","estadoValidacionReferencia":"ROJO"},
+          {"id_registro_laboral":"345324535","nombreOrganizacion":"Bancolombia", "fechaCreacion":"2015-02-18", "fechaInicio":"2015-02-18", "fechaFin":"2015-02-18", "duracionDias":15, "duracionMeses":3, "duracion":"2 meses 15 días","estado":"NARANJA", "estadoValidacionEmpleador":"ROJO", "estadoValidacionSegSocial":"NARANJA","estadoValidacionReferencia":"ROJO"},
+          {"id_registro_laboral":"76535434s","nombreOrganizacion":"Bavaria", "fechaCreacion":"2015-02-18", "fechaInicio":"2015-02-18", "fechaFin":"2015-02-18", "duracionDias":15, "duracionMeses":3, "duracion":"7 meses 15 días", "estado":"ROJO", "estadoValidacionEmpleador":"ROJO", "estadoValidacionSegSocial":"VERDE","estadoValidacionReferencia":"NARANJA"}
+      ]}
