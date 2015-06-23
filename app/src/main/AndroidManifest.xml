@@ -12,6 +12,7 @@
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="com.sistemasciudadanos.myapplication.REGISTRARPERIODOLABORALACTIVITY" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
@@ -29,6 +30,7 @@
             android:label="@string/title_activity_administrar_periodos" >
             <intent-filter>
                 <action android:name="com.sistemasciudadanos.myapplication.ADMINISTRARPERIODOSACTIVITY" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
@@ -50,8 +52,13 @@
             android:label="@string/title_activity_buscar_empresa_inexistente" >
             <intent-filter>
                 <action android:name="com.sistemasciudadanos.myapplication.BuscarEmpresaInexistenteActivity" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".registroLaboralDetallado"
+            android:label="@string/title_activity_registro_laboral_detallado" >
         </activity>
     </application>
 

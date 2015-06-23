@@ -32,4 +32,6 @@
     <string name="nitOrganizacion">NIT</string>
     <string name="title_activity_buscar_empresa_inexistente">BuscarEmpresaInexistenteActivity
     </string>
+    <string name="tituloValidacionEmpleador">Empleador</string>
+    <string name="title_activity_registro_laboral_detallado">registroLaboralDetallado</string>
 </resources>

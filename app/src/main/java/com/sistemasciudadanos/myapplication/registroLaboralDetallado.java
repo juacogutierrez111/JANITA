@@ -1,28 +1,24 @@
 package com.sistemasciudadanos.myapplication;
 
-import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.EditText;
-import android.widget.TextView;
 
 
-public class BuscarEmpresaInexistenteActivity extends ActionBarActivity {
+public class registroLaboralDetallado extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_buscar_empresa_inexistente);
+        setContentView(R.layout.activity_registro_laboral_detallado);
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_buscar_empresa_inexistente, menu);
+        getMenuInflater().inflate(R.menu.menu_registro_laboral_detallado, menu);
         return true;
     }
 
@@ -40,14 +36,4 @@ public class BuscarEmpresaInexistenteActivity extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
-    public void EnviarDatosEmpresa(View v){
-
-        final EditText nombreOrganizacionTF = (EditText) findViewById(R.id.nombreOrganizacionTF);
-        nombreOrganizacionTF.setText("Hola mundo!");
-    }
-
-
-
-
 }
