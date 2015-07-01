@@ -1,17 +1,62 @@
 package com.sistemasciudadanos.myapplication;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ListView;
+
+import com.sistemasciudadanos.janita.cad.CADLocal;
+import com.sistemasciudadanos.janita.comun.HistorialLaboral;
+
+import java.io.FileNotFoundException;
 
 
 public class DetalleRegistroLaboralActivity extends ActionBarActivity {
+
+    Integer posicionRL;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detalle_registro_laboral);
+
+
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            posicionRL = extras.getInt("PosicionRegistroLaboral");
+        }
+
+        HistorialLaboral historialLaboral = null;
+
+        try {
+            historialLaboral = CADLocal.getInstance().obtenerHistorialLaboral(this.getApplicationContext());
+        }
+        catch (FileNotFoundException e){
+            e.printStackTrace();
+        }
+
+        final ListView listview = (ListView) findViewById(R.id.lvValidaciones);
+        final RegistrosLaboralesArrayAdapter adapter = new RegistrosLaboralesArrayAdapter(this.getApplicationContext(), historialLaboral.getRegistrosLaborales());
+        listview.setAdapter(adapter);
+
+        AdapterView.OnItemClickListener listener = new AdapterView.OnItemClickListener() {
+            public void onItemClick(AdapterView<?> parent, View view, int position,
+                                    long id) {
+
+                Intent detallePLIntent = new Intent("com.sistemasciudadanos.myapplication.DETALLEREGISTROLABORAL");
+                startActivity(detallePLIntent);
+                setTitle(parent.getItemAtPosition(position).toString());
+            }
+        };
+
+        listview.setOnItemClickListener(listener);
+
+
+
     }
 
 

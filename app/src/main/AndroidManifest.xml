@@ -57,7 +57,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".registroLaboralDetallado"
+            android:name=".RegistroLaboralDetallado"
             android:label="@string/title_activity_registro_laboral_detallado" >
         </activity>
     </application>

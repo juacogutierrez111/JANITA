@@ -49,25 +49,16 @@ public class AdministrarPeriodosActivity extends ActionBarActivity {
                 "OS/2", "Ubuntu", "Windows7", "Max OS X", "Linux", "OS/2",
                 "Sony Pictures", "Pixar", "Alcadía de Bogotá" };
 
-/*
-        final ArrayList<String> list = new ArrayList<String>();
-        for (int i = 0; i < values.length; ++i) {
-            list.add(values[i]);
-        }
-*/
-
         final RegistrosLaboralesArrayAdapter adapter = new RegistrosLaboralesArrayAdapter(this.getApplicationContext(), historialLaboral.getRegistrosLaborales());
         listview.setAdapter(adapter);
 
         AdapterView.OnItemClickListener listener = new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View view, int position,
                                     long id) {
-
                 Intent detallePLIntent = new Intent("com.sistemasciudadanos.myapplication.DETALLEREGISTROLABORAL");
-                //detallePLIntent.putExtra("id", parent.getItemAtPosition(position).toString());
+                detallePLIntent.putExtra("PosicionRegistroLaboral", position);
                 startActivity(detallePLIntent);
                 setTitle(parent.getItemAtPosition(position).toString());
-                //Llama la actividad de detalle y le pasa el objeto período....
             }
         };
 

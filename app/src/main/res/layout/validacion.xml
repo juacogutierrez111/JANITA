@@ -3,4 +3,135 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tipoValidacion"
+            android:id="@+id/ptblblTipoValidacion"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ptbTipoValidacion"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/ptblblTipoValidacion"
+            android:layout_toEndOf="@+id/ptblblTipoValidacion"
+            android:text="tipo_validacion" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/estadoValidacion"
+            android:id="@+id/ptblblEstadoValidacion"
+            android:layout_below="@+id/ptblblTipoValidacion"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="estado"
+            android:id="@+id/ptbEstadoValidacion"
+            android:layout_below="@+id/ptblblTipoValidacion"
+            android:layout_toRightOf="@+id/ptblblEstadoValidacion"
+            android:layout_toEndOf="@+id/ptblblEstadoValidacion" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fechaValidacion"
+            android:id="@+id/ptvlblFechaValidacion"
+            android:layout_below="@+id/ptblblEstadoValidacion"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="fecha_validacion"
+            android:id="@+id/ptvFechaValidacion"
+            android:layout_alignTop="@+id/ptvlblFechaValidacion"
+            android:layout_toRightOf="@+id/ptvlblFechaValidacion"
+            android:layout_toEndOf="@+id/ptvlblFechaValidacion" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/periodoValidado"
+            android:id="@+id/ptvlblPeriodoValidado"
+            android:layout_below="@+id/ptvlblFechaValidacion"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/ptvFechaInicio"
+            android:layout_below="@+id/ptvlblFechaValidacion"
+            android:layout_toRightOf="@+id/ptvlblFechaValidacion"
+            android:layout_toEndOf="@+id/ptvlblFechaValidacion" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:id="@+id/textView7"
+            android:layout_below="@+id/ptvFechaValidacion"
+            android:layout_toRightOf="@+id/ptvFechaInicio"
+            android:layout_toEndOf="@+id/ptvFechaInicio" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/ptvFechaFin"
+            android:layout_below="@+id/ptvFechaValidacion"
+            android:layout_toRightOf="@+id/textView7"
+            android:layout_toEndOf="@+id/textView7" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/idValidacion"
+            android:id="@+id/ptvlblID"
+            android:layout_below="@+id/ptvlblPeriodoValidado"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1267854663"
+            android:id="@+id/ptvIDValidacion"
+            android:layout_below="@+id/ptvlblPeriodoValidado"
+            android:layout_toRightOf="@+id/ptvlblID"
+            android:layout_toEndOf="@+id/ptvlblID" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/observaciones"
+            android:id="@+id/ptvlblObservaciones"
+            android:layout_below="@+id/ptvlblID"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="..."
+            android:id="@+id/ptvObservaciones"
+            android:layout_below="@+id/ptvIDValidacion"
+            android:layout_toRightOf="@+id/ptvlblObservaciones"
+            android:layout_toEndOf="@+id/ptvlblObservaciones" />
+
+    </RelativeLayout>
 </LinearLayout>

@@ -63,6 +63,7 @@ public class HistorialLaboral {
     public RegistroLaboral[] getRegistrosLaborales() {
         return registrosLaborales;
     }
+
     public void setRegistrosLaborales(RegistroLaboral[] registrosLaborales) {
         this.registrosLaborales = registrosLaborales;
     }
@@ -71,5 +72,4 @@ public class HistorialLaboral {
         registrosLaborales2 = Info.getInstance().JSONmapper.writeValueAsString(registrosLaborales);
         return registrosLaborales2;
     }
-
 }

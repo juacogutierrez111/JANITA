@@ -34,4 +34,10 @@
     </string>
     <string name="tituloValidacionEmpleador">Empleador</string>
     <string name="title_activity_registro_laboral_detallado">registroLaboralDetallado</string>
+    <string name="tipoValidacion">Tipo de validación</string>
+    <string name="estadoValidacion">Estado</string>
+    <string name="fechaValidacion">Fecha validación</string>
+    <string name="periodoValidado">Período validado</string>
+    <string name="idValidacion">ID</string>
+    <string name="observaciones">Observaciones</string>
 </resources>

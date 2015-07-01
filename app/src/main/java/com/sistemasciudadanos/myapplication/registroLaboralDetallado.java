@@ -1,17 +1,52 @@
 package com.sistemasciudadanos.myapplication;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ListView;
+
+import com.sistemasciudadanos.janita.cad.CADLocal;
+import com.sistemasciudadanos.janita.comun.HistorialLaboral;
+
+import java.io.FileNotFoundException;
 
 
-public class registroLaboralDetallado extends ActionBarActivity {
+public class RegistroLaboralDetallado extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro_laboral_detallado);
+
+
+        HistorialLaboral historialLaboral = null;
+
+        try {
+            historialLaboral = CADLocal.getInstance().obtenerHistorialLaboral(this.getApplicationContext());
+        }
+        catch (FileNotFoundException e){
+            e.printStackTrace();
+        }
+
+        final ListView listview = (ListView) findViewById(R.id.lvValidaciones);
+        final RegistrosLaboralesArrayAdapter adapter = new RegistrosLaboralesArrayAdapter(this.getApplicationContext(), historialLaboral.getRegistrosLaborales());
+        listview.setAdapter(adapter);
+
+        AdapterView.OnItemClickListener listener = new AdapterView.OnItemClickListener() {
+            public void onItemClick(AdapterView<?> parent, View view, int position,
+                                    long id) {
+
+                Intent detallePLIntent = new Intent("com.sistemasciudadanos.myapplication.DETALLEREGISTROLABORAL");
+                startActivity(detallePLIntent);
+                setTitle(parent.getItemAtPosition(position).toString());
+            }
+        };
+
+        listview.setOnItemClickListener(listener);
     }
 
 
@@ -36,4 +71,7 @@ public class registroLaboralDetallado extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+
+
 }
